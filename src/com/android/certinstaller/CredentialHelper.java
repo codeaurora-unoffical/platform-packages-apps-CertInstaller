@@ -271,7 +271,7 @@ class CredentialHelper {
         Intent intent = new Intent("com.android.credentials.INSTALL");
         // To prevent the private key from being sniffed, we explicitly spell
         // out the intent receiver class.
-        if (!isWear(context)) {
+        if (true) { // clockworksetting is not implemented
             intent.setClassName(Util.SETTINGS_PACKAGE, "com.android.settings.CredentialStorage");
         } else {
             intent.setClassName("com.google.android.apps.wearable.settings",
